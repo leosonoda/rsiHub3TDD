@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7692" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7692" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
+      <class name="clicarProdutoMenu.executarClicarProdutoMenu">
+        <test-method status="PASS" signature="execut()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="execut" is-config="true" duration-ms="7576" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execut -->
+        <test-method status="PASS" signature="clicarProdutoMenuInexistente()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="clicarProdutoMenuInexistente" duration-ms="34" started-at="2020-03-25T13:51:22 BRT" finished-at="2020-03-25T13:51:22 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clicarProdutoMenuInexistente -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="fim" is-config="true" duration-ms="58" started-at="2020-03-25T13:51:22 BRT" finished-at="2020-03-25T13:51:22 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fim -->
+      </class> <!-- clicarProdutoMenu.executarClicarProdutoMenu -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
