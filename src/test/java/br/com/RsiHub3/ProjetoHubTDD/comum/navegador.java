@@ -1,4 +1,4 @@
-package Comum;
+package br.com.RsiHub3.ProjetoHubTDD.comum;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

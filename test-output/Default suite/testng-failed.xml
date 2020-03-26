@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="clicarProdutoMenu.executarClicarProdutoMenu">
+      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarConsultaProdutoLupa">
         <methods>
           <include name="fim"/>
-          <include name="clicarProdutoMenuInexistente"/>
+          <include name="consultarProdutoLupaInexistente"/>
           <include name="execut"/>
         </methods>
-      </class> <!-- clicarProdutoMenu.executarClicarProdutoMenu -->
+      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarConsultaProdutoLupa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

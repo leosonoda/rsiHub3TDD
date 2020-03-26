@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7692" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
+  <suite name="Default suite" duration-ms="18905" started-at="2020-03-26T16:01:30 BRT" finished-at="2020-03-26T16:01:48 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7692" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
-      <class name="clicarProdutoMenu.executarClicarProdutoMenu">
-        <test-method status="PASS" signature="execut()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="execut" is-config="true" duration-ms="7576" started-at="2020-03-25T13:51:14 BRT" finished-at="2020-03-25T13:51:22 BRT">
+    <test name="Default test" duration-ms="18905" started-at="2020-03-26T16:01:30 BRT" finished-at="2020-03-26T16:01:48 BRT">
+      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta">
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="execut" is-config="true" duration-ms="8255" started-at="2020-03-26T16:01:30 BRT" finished-at="2020-03-26T16:01:38 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execut -->
-        <test-method status="PASS" signature="clicarProdutoMenuInexistente()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="clicarProdutoMenuInexistente" duration-ms="34" started-at="2020-03-25T13:51:22 BRT" finished-at="2020-03-25T13:51:22 BRT">
+        <test-method status="PASS" signature="logarComSucesso()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="logarComSucesso" duration-ms="1740" started-at="2020-03-26T16:01:38 BRT" finished-at="2020-03-26T16:01:40 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clicarProdutoMenuInexistente -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:clicarProdutoMenu.executarClicarProdutoMenu@e320068]" name="fim" is-config="true" duration-ms="58" started-at="2020-03-25T13:51:22 BRT" finished-at="2020-03-25T13:51:22 BRT">
+        </test-method> <!-- logarComSucesso -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="fim" is-config="true" duration-ms="101" started-at="2020-03-26T16:01:40 BRT" finished-at="2020-03-26T16:01:40 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- clicarProdutoMenu.executarClicarProdutoMenu -->
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="execut" is-config="true" duration-ms="6833" started-at="2020-03-26T16:01:40 BRT" finished-at="2020-03-26T16:01:46 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execut -->
+        <test-method status="PASS" signature="loginIncorreto()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="loginIncorreto" duration-ms="1832" started-at="2020-03-26T16:01:46 BRT" finished-at="2020-03-26T16:01:48 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIncorreto -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@e320068]" name="fim" is-config="true" duration-ms="110" started-at="2020-03-26T16:01:48 BRT" finished-at="2020-03-26T16:01:48 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fim -->
+      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

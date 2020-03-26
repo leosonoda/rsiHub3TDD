@@ -1,4 +1,4 @@
-package criarNovoCadastro;
+package br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes;
 
 
 import org.openqa.selenium.WebDriver;
@@ -6,13 +6,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import Comum.navegador;
+import br.com.RsiHub3.ProjetoHubTDD.comum.navegador;
+import br.com.RsiHub3.ProjetoHubTDD.pagesObjects.menuLogin;
+import br.com.RsiHub3.ProjetoHubTDD.pagesObjects.paginaCriacaoCadastro;
+import br.com.RsiHub3.ProjetoHubTDD.pagesObjects.paginaInicial;
 
 public class executarCriarNovoCadastro {
 	
 	private WebDriver driver;
 	
-	String usuario = "jorge5"; 
+	String usuario = "jorgines"; 
 	String email = "jorge.jorge@email.com.br";
 	String senha = "123456Senha";
 	String senhaCofirm = "123456Senha";
@@ -37,11 +40,15 @@ public class executarCriarNovoCadastro {
 	
 		public void cadatroSucesso() {
 			
-			acessarMenuCreate novoCadastro = new acessarMenuCreate(driver);
+			paginaInicial acessoMenu = new paginaInicial(driver);
+	
+			acessoMenu.acessarMenuLogin();
 			
-			novoCadastro.acessoMenu();
+			menuLogin novoCadastro = new menuLogin(driver); 
+		
+			novoCadastro.acessarMenuCreate();
 			
-			insercaoDados dadosLeonardo = new insercaoDados(driver);
+			paginaCriacaoCadastro dadosLeonardo = new paginaCriacaoCadastro(driver);
 			
 			dadosLeonardo.novosDados(usuario, email, senha, senhaCofirm, nome, sobrenome, telefone, 
 					pais, cidade, endereco, estado, codPostal);
@@ -49,23 +56,27 @@ public class executarCriarNovoCadastro {
 		
 			//Validação
 			
-			validacaoCriarNovoCadastro novaValid = new validacaoCriarNovoCadastro(driver);
+			paginaCriacaoCadastro novaValid = new paginaCriacaoCadastro(driver);
 			
-			novaValid.validarPositivo();
+			novaValid.validarCadastroSucesso();
 	
 	}
 	
 	@Test
 	
-	public void cadastroRepetido() throws InterruptedException {
+	public void cadastroRepetido() {
 		
 		String usuarioNegativo = "jorge_jorge"; 
 		
-		acessarMenuCreate novoCadastro = new acessarMenuCreate(driver);
+		paginaInicial acessoMenu = new paginaInicial(driver);
 		
-		novoCadastro.acessoMenu();
+		acessoMenu.acessarMenuLogin();
 		
-		insercaoDados dadosLeonardo = new insercaoDados(driver);
+		menuLogin novoCadastro = new menuLogin(driver); 
+	
+		novoCadastro.acessarMenuCreate();
+		
+		paginaCriacaoCadastro dadosLeonardo = new paginaCriacaoCadastro(driver);
 		
 		dadosLeonardo.novosDados(usuarioNegativo, email, senha, senhaCofirm, nome, sobrenome, telefone, 
 				pais, cidade, endereco, estado, codPostal);
@@ -73,14 +84,11 @@ public class executarCriarNovoCadastro {
 		
 		//Validação
 		
-		validacaoCriarNovoCadastro novaValid = new validacaoCriarNovoCadastro(driver);
+		paginaCriacaoCadastro novaValid = new paginaCriacaoCadastro(driver);
 		
-		novaValid.validarNegativo();
-		
+		novaValid.validarCadastroNegativo();
 		
 }
-	
-	
 	
 	@AfterMethod
 	

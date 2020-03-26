@@ -1,4 +1,4 @@
-package criarNovoCadastro;
+package br.com.RsiHub3.ProjetoHubTDD.pagesObjects;
 
 import java.time.Duration;
 
@@ -8,17 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-public class insercaoDados {
-	
-	
-	private WebDriver driver;
-	
-	public insercaoDados(WebDriver driver) {
+public class paginaCriacaoCadastro {
+		
+		private WebDriver driver;
+		
+		public paginaCriacaoCadastro(WebDriver driver) {
 			
-	this.driver = driver;
-	
-	
+				this.driver = driver;
+
 	}
 		
 		public void novosDados(String usuario, String email, String senha, String senhaConfirm, String nome, String sobrenome,
@@ -89,4 +88,39 @@ public class insercaoDados {
 			
 			
 		}
+		
+		
+		public void validarCadastroSucesso() {
+			
+			WebElement validacao = driver.findElement(By.id("speakersTxt"));
+			
+			System.out.println(validacao.getText());
+	        
+	        String esperado = "SPEAKERS" ;
+	       
+	        Assert.assertEquals(esperado, validacao.getText());
+
+				
+		}
+		
+		
+		public void validarCadastroNegativo() {
+			
+			
+			WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(10));
+			
+			espera.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("/html/body/div[3]/section/article/sec-form/div[2]/label[1]"), "User name already exists"));
+			
+			WebElement validacao = driver.findElement(By.xpath("/html/body/div[3]/section/article/sec-form/div[2]/label[1]"));
+			
+			String esperado = "User name already exists";
+			
+			Assert.assertEquals(esperado, validacao.getText());
+			
+
+			
+		}
+		
+		
+	
 }
