@@ -1,7 +1,5 @@
 package br.com.RsiHub3.ProjetoHubTDD.pagesObjects;
 
-import static org.testng.Assert.assertFalse;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,21 +20,15 @@ public class paginaInicial {
 			this.driver = driver;
 
 }
-
-	public void buscarProdutoMenu() {
-
-		WebElement paginaHeadphone = driver.findElement(By.id("headphonesTxt"));
-		
-		paginaHeadphone.click();
-		
-		driver.findElement(By.xpath("//a[contains(text(),'Beats Studio 2 Over-Ear Matte Black Headphones')]")).click();
 	
+	public void clicarNaCategoria(String categoria) {
+
+		driver.findElement(By.id(categoria)).click();
 		
 	}
 	
 	
-	public void buscaProdutoMenuNegativo() {
-			
+		public List<String> listarCategoriasTela() {
 			
 			List<WebElement> categorias = driver.findElements(By.xpath("//span[@class='shop_now roboto-bold ng-binding']"));
 			
@@ -49,39 +41,52 @@ public class paginaInicial {
 				lista.add(var);
 			}
 			
-			String produto = "TECLADO";
+			return lista;
 			
-			assertFalse(lista.contains(produto));
-				
 		}
-	
 		
-		public void pesquisaProdutoLupa(String produto) {
-			
-			driver.findElement(By.id("menuSearch")).click();
-			
-			driver.findElement(By.id("autoComplete")).sendKeys(produto);
-	
-			driver.findElement(By.id("autoComplete")).sendKeys(Keys.ENTER);
-
+		public void acessarLupa() {
 		
-	}
-	
-	
+			WebElement lupa = driver.findElement(By.id("menuSearch"));
+			
+			lupa.click();
+			
+		}
+		
+		public void pesquisarLupa(String palavraBusca) {
+			
+			WebElement caixaBusca = driver.findElement(By.id("autoComplete"));
+			
+			caixaBusca.sendKeys(palavraBusca);
+			
+			caixaBusca.sendKeys(Keys.ENTER);
+			
+		}
+		
+		
 		public void acessarMenuLogin() {
-					
-					WebElement menuUsuario = driver.findElement(By.id("menuUser"));
-					
-					menuUsuario.click();
-					
-					WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
-					
-					espera.until(ExpectedConditions.visibilityOfElementLocated(By.id("signInResultMessage")));
 			
+			WebElement menuLogin = driver.findElement(By.id("menuUser"));
+			
+			menuLogin.click();
+			
+			WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
+			
+			espera.until(ExpectedConditions.visibilityOfElementLocated(By.id("signInResultMessage")));
+			
+			WebElement campoPassword = driver.findElement(By.name("password"));
+			
+			campoPassword.click();
 			
 		}
 		
-	
-	
-	
+		
+		public String obterUserLogado() {
+			
+			WebElement validacao = driver.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));    
+
+		        return validacao.getText();
+					
+			}
+		
 }

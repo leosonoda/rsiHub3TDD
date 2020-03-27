@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class menuLogin {
 	
@@ -18,14 +17,33 @@ public class menuLogin {
 			this.driver = driver;
 
 	}
-
 		
-	public void acessarMenuCreate() {
+		public void preencherUsername(String usuario) {
+			WebElement user = driver.findElement(By.name("username"));
 			
+			user.sendKeys(usuario);
 			
-			WebElement campoPassword = driver.findElement(By.name("password"));
+		}
+		
+		public void preencherPassword(String senha) {
+			WebElement pass = driver.findElement(By.name("password"));
 			
-			campoPassword.click();
+			pass.sendKeys(senha);
+			
+		}
+		
+		public void clicarBotaoLogar() {
+			WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
+			
+			espera.until(ExpectedConditions.elementToBeClickable(By.id("sign_in_btnundefined")));
+			
+			WebElement botaoLogar = driver.findElement(By.id("sign_in_btnundefined"));
+			
+			botaoLogar.click();
+			
+		}
+		
+		public void acessarMenuCreate() {
 			
 			WebElement botao = driver.findElement(By.linkText("CREATE NEW ACCOUNT"));
 			
@@ -35,64 +53,16 @@ public class menuLogin {
 			
 		}
 		
-	public void novoLogin(String usuario, String senha) {
-			
-			WebElement menuUsuario = driver.findElement(By.id("menuUser"));
-			
-			menuUsuario.click();
-			
+		public String obterMensagemErro() {
+		
 			WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
 			
-			espera.until(ExpectedConditions.visibilityOfElementLocated(By.id("signInResultMessage")));
-			
-			WebElement user = driver.findElement(By.name("username"));
-			
-			user.sendKeys(usuario);
-			
-			WebElement password = driver.findElement(By.name("password"));
-			
-			password.sendKeys(senha);
-			
-			
-			espera.until(ExpectedConditions.elementToBeClickable(By.id("sign_in_btnundefined")));
-			
-			WebElement botaoLogar = driver.findElement(By.id("sign_in_btnundefined"));
-			
-			botaoLogar.click();
-			
-			
-		}
-		
+			espera.until(ExpectedConditions.textToBePresentInElementLocated(By.id("signInResultMessage"), "Incorrect user name or password."));
 	
-	public void validarLoginSucesso() {
-		
-	WebElement validacao = driver.findElement(By.xpath("//span[@class='hi-user containMiniTitle ng-binding']"));
-		
-		System.out.println(validacao.getText());
-        
-        String esperado = "jorge_jorge" ;
-       
-       Assert.assertEquals(esperado, validacao.getText());
-        
-			
+			WebElement validacao = driver.findElement(By.id("signInResultMessage"));
+		    
+			return validacao.getText();
+	
 	}
-	
-	
-	public void validarLoginSemSucesso() {
 		
-		WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
-		
-		espera.until(ExpectedConditions.textToBePresentInElementLocated(By.id("signInResultMessage"), "Incorrect user name or password."));
-
-		WebElement validacao = driver.findElement(By.id("signInResultMessage"));
-	    
-        String esperado = "Incorrect user name or password." ;
-       
-        Assert.assertEquals(esperado, validacao.getText());
-		
-		
-	}
-	
-		
-
 }

@@ -3,6 +3,7 @@ package br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes;
 
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +17,8 @@ public class executarLogarConta {
 	
 	private WebDriver driver;
 	
+	//Funcionando Não Mexer
+	
 	@BeforeMethod
 	
 	public void execut() {
@@ -27,18 +30,21 @@ public class executarLogarConta {
 	
 	public void logarComSucesso() {
 		
-		paginaInicial acesso = new paginaInicial(driver);
+		paginaInicial novoAcesso = new paginaInicial(driver);
 		
-		acesso.acessarMenuLogin();
+		novoAcesso.acessarMenuLogin();
 		
-		menuLogin loginConta = new menuLogin(driver);
+		menuLogin novoMenuLogin = new menuLogin(driver);
 		
-		loginConta.novoLogin("jorge_jorge", "123456Senha");
+		novoMenuLogin.preencherUsername("jorge_jorge");
 		
-		//Validação
-		menuLogin novaValid = new menuLogin(driver);
+		novoMenuLogin.preencherPassword("123456Senha");
 		
-		novaValid.validarLoginSucesso();
+		novoMenuLogin.clicarBotaoLogar();
+		
+		
+		
+		Assert.assertEquals(novoAcesso.obterUserLogado(), "jorge_jorge");
 		
 	}
 	
@@ -46,20 +52,24 @@ public class executarLogarConta {
 		
 		public void loginIncorreto(){
 			
-			paginaInicial acesso = new paginaInicial(driver);
-			
-			acesso.acessarMenuLogin();
-			
-			menuLogin loginConta = new menuLogin(driver);
-			
-			loginConta.novoLogin("jorge_50", "123456Senha");
-			
+			paginaInicial novoAcesso = new paginaInicial(driver);
 
+			novoAcesso.acessarMenuLogin();
+			
+			menuLogin novoMenuLogin = new menuLogin(driver);
+			
+			novoMenuLogin.preencherUsername("jorge_errado");
+			
+			novoMenuLogin.preencherPassword("123456Senha");
+			
+			novoMenuLogin.clicarBotaoLogar();
+			
 			//Validação
+	
+			novoMenuLogin.obterMensagemErro();
+
+			Assert.assertEquals("Incorrect user name or password.", novoMenuLogin.obterMensagemErro());
 			
-			menuLogin novaValid = new menuLogin(driver);
-			
-			novaValid.validarLoginSemSucesso();
 			
 	}
 		

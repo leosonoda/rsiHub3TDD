@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class paginaBusca {
 	
@@ -19,25 +18,22 @@ public class paginaBusca {
 
 	}
 
-	public void clicarProdutoPaginaBusca(String nomeProduto) {
-			
-		driver.findElement(By.linkText(nomeProduto)).click();
-			
-			
-	}
+		public void clicarProdutoPaginaBusca(String nomeProduto) {
+				
+			driver.findElement(By.linkText(nomeProduto)).click();
+					
+		}
 	
-	public void validarBuscarProdutoInexistente() {
-			
-			WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
-			
-			espera.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//span[@class='ng-binding']"), "No results for \"monitor\""));
-			
-			WebElement validacao = driver.findElement(By.xpath("//span[@class='ng-binding']"));
-			
-	        String esperado = "No results for \"monitor\"";
-	        
-	        Assert.assertEquals(esperado, validacao.getText());
-	        
-	}
-	
-	}
+		public String buscaInexistente() {
+				
+				WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
+				
+				espera.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//span[@class='ng-binding']"), "No results for \"monitor\""));
+				
+				WebElement validacao = driver.findElement(By.xpath("//span[@class='ng-binding']"));
+				
+				return validacao.getText();
+		           
+		}
+		
+}

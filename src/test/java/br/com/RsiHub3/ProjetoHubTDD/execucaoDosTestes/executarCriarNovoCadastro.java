@@ -2,6 +2,7 @@ package br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes;
 
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,10 +16,10 @@ public class executarCriarNovoCadastro {
 	
 	private WebDriver driver;
 	
-	String usuario = "jorgines"; 
+	String usuario = "jorgin13"; 
 	String email = "jorge.jorge@email.com.br";
 	String senha = "123456Senha";
-	String senhaCofirm = "123456Senha";
+	String senhaConfirm = "123456Senha";
 	String nome = "Jorge";
 	String sobrenome = "Jorge";
 	String telefone = "987654321";
@@ -27,6 +28,8 @@ public class executarCriarNovoCadastro {
 	String endereco = "Avenida Paulista, 1001";
 	String estado = "São Paulo";
 	String codPostal = "12345-987";
+	
+	//Teste funcionando, não mexer
 
 	@BeforeMethod
 	
@@ -40,25 +43,48 @@ public class executarCriarNovoCadastro {
 	
 		public void cadatroSucesso() {
 			
-			paginaInicial acessoMenu = new paginaInicial(driver);
+			paginaInicial novoAcesso = new paginaInicial(driver);
 	
-			acessoMenu.acessarMenuLogin();
+			novoAcesso.acessarMenuLogin();
 			
-			menuLogin novoCadastro = new menuLogin(driver); 
-		
+			menuLogin novoCadastro = new menuLogin(driver);
+			
 			novoCadastro.acessarMenuCreate();
 			
 			paginaCriacaoCadastro dadosLeonardo = new paginaCriacaoCadastro(driver);
 			
-			dadosLeonardo.novosDados(usuario, email, senha, senhaCofirm, nome, sobrenome, telefone, 
-					pais, cidade, endereco, estado, codPostal);
+			dadosLeonardo.preencherUsuario(usuario);
 			
-		
+			dadosLeonardo.preencherEmail(email);
+			
+			dadosLeonardo.preencherSenha(senha);
+			
+			dadosLeonardo.preencherConfirSenha(senhaConfirm);
+			
+			dadosLeonardo.preencherNome(nome);
+			
+			dadosLeonardo.preencherSobrenome(sobrenome);
+			
+			dadosLeonardo.preencherTelefone(telefone);
+			
+			dadosLeonardo.preencherPais(pais);
+			
+			dadosLeonardo.preencherCidade(cidade);
+			
+			dadosLeonardo.preencherEndereco(endereco);
+			
+			dadosLeonardo.preencherEstado(estado);
+			
+			dadosLeonardo.preencherCodPostal(codPostal);
+			
+			dadosLeonardo.aceitarTermos();
+			
+			dadosLeonardo.clicarBotaoRegistro();
+			
 			//Validação
 			
-			paginaCriacaoCadastro novaValid = new paginaCriacaoCadastro(driver);
 			
-			novaValid.validarCadastroSucesso();
+		    Assert.assertEquals(usuario, novoAcesso.obterUserLogado());
 	
 	}
 	
@@ -66,28 +92,52 @@ public class executarCriarNovoCadastro {
 	
 	public void cadastroRepetido() {
 		
-		String usuarioNegativo = "jorge_jorge"; 
+			String usuarioNegativo = "jorge_jorge"; 
+			
+			
+			
+			paginaInicial novoAcesso = new paginaInicial(driver);
+			
+			novoAcesso.acessarMenuLogin();
+			
+			menuLogin novoCadastro = new menuLogin(driver);
+			
+			novoCadastro.acessarMenuCreate();
+			
+			paginaCriacaoCadastro dadosLeonardo = new paginaCriacaoCadastro(driver);
+			
+			dadosLeonardo.preencherUsuario(usuarioNegativo);
+			
+			dadosLeonardo.preencherEmail(email);
+			
+			dadosLeonardo.preencherSenha(senha);
+			
+			dadosLeonardo.preencherConfirSenha(senhaConfirm);
+			
+			dadosLeonardo.preencherNome(nome);
+			
+			dadosLeonardo.preencherSobrenome(sobrenome);
+			
+			dadosLeonardo.preencherTelefone(telefone);
+			
+			dadosLeonardo.preencherPais(pais);
+			
+			dadosLeonardo.preencherCidade(cidade);
+			
+			dadosLeonardo.preencherEndereco(endereco);
+			
+			dadosLeonardo.preencherEstado(estado);
+			
+			dadosLeonardo.preencherCodPostal(codPostal);
+			
+			dadosLeonardo.aceitarTermos();
+			
+			dadosLeonardo.clicarBotaoRegistro();
+			
+			//Validação
 		
-		paginaInicial acessoMenu = new paginaInicial(driver);
-		
-		acessoMenu.acessarMenuLogin();
-		
-		menuLogin novoCadastro = new menuLogin(driver); 
-	
-		novoCadastro.acessarMenuCreate();
-		
-		paginaCriacaoCadastro dadosLeonardo = new paginaCriacaoCadastro(driver);
-		
-		dadosLeonardo.novosDados(usuarioNegativo, email, senha, senhaCofirm, nome, sobrenome, telefone, 
-				pais, cidade, endereco, estado, codPostal);
-		
-		
-		//Validação
-		
-		paginaCriacaoCadastro novaValid = new paginaCriacaoCadastro(driver);
-		
-		novaValid.validarCadastroNegativo();
-		
+			Assert.assertEquals("User name already exists", dadosLeonardo.mensagemErroUser());
+			
 }
 	
 	@AfterMethod
