@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46385" started-at="2020-03-27T19:56:39 BRT" finished-at="2020-03-27T19:57:25 BRT">
+  <suite name="Default suite" duration-ms="19494" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:32 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46385" started-at="2020-03-27T19:56:39 BRT" finished-at="2020-03-27T19:57:25 BRT">
-      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro">
-        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="execut" is-config="true" duration-ms="8068" started-at="2020-03-27T19:56:39 BRT" finished-at="2020-03-27T19:56:47 BRT">
+    <test name="Default test" duration-ms="19494" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:32 BRT">
+      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta">
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="execut" is-config="true" duration-ms="8828" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:21 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execut -->
-        <test-method status="PASS" signature="cadastroRepetido()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="cadastroRepetido" duration-ms="15895" started-at="2020-03-27T19:56:47 BRT" finished-at="2020-03-27T19:57:03 BRT">
+        <test-method status="PASS" signature="logarComSucesso()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="logarComSucesso" duration-ms="2411" started-at="2020-03-28T14:33:21 BRT" finished-at="2020-03-28T14:33:23 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadastroRepetido -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="fim" is-config="true" duration-ms="74" started-at="2020-03-27T19:57:03 BRT" finished-at="2020-03-27T19:57:03 BRT">
+        </test-method> <!-- logarComSucesso -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="fim" is-config="true" duration-ms="71" started-at="2020-03-28T14:33:23 BRT" finished-at="2020-03-28T14:33:23 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="execut" is-config="true" duration-ms="6104" started-at="2020-03-27T19:57:03 BRT" finished-at="2020-03-27T19:57:09 BRT">
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="execut" is-config="true" duration-ms="6381" started-at="2020-03-28T14:33:23 BRT" finished-at="2020-03-28T14:33:30 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execut -->
-        <test-method status="PASS" signature="cadatroSucesso()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="cadatroSucesso" duration-ms="16152" started-at="2020-03-27T19:57:09 BRT" finished-at="2020-03-27T19:57:25 BRT">
+        <test-method status="PASS" signature="loginIncorreto()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="loginIncorreto" duration-ms="1710" started-at="2020-03-28T14:33:30 BRT" finished-at="2020-03-28T14:33:32 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadatroSucesso -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro@30a3107a]" name="fim" is-config="true" duration-ms="66" started-at="2020-03-27T19:57:25 BRT" finished-at="2020-03-27T19:57:25 BRT">
+        </test-method> <!-- loginIncorreto -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="fim" is-config="true" duration-ms="65" started-at="2020-03-28T14:33:32 BRT" finished-at="2020-03-28T14:33:32 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarCriarNovoCadastro -->
+      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import br.com.RsiHub3.ProjetoHubTDD.comum.navegador;
 import br.com.RsiHub3.ProjetoHubTDD.pagesObjects.menuLogin;
 import br.com.RsiHub3.ProjetoHubTDD.pagesObjects.paginaInicial;
+import utilityExcel.Constant;
+import utilityExcel.ExcelUtils;
 
 
 public class executarLogarConta {
@@ -28,7 +30,9 @@ public class executarLogarConta {
 
 	@Test
 	
-	public void logarComSucesso() {
+	public void logarComSucesso() throws Exception {
+
+		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Planilha1");
 		
 		paginaInicial novoAcesso = new paginaInicial(driver);
 		
@@ -36,13 +40,12 @@ public class executarLogarConta {
 		
 		menuLogin novoMenuLogin = new menuLogin(driver);
 		
-		novoMenuLogin.preencherUsername("jorge_jorge");
+		novoMenuLogin.preencherUsername(ExcelUtils.getCellData(2, 1));
 		
-		novoMenuLogin.preencherPassword("123456Senha");
+		novoMenuLogin.preencherPassword(ExcelUtils.getCellData(2, 2));
 		
 		novoMenuLogin.clicarBotaoLogar();
-		
-		
+	
 		
 		Assert.assertEquals(novoAcesso.obterUserLogado(), "jorge_jorge");
 		
@@ -50,7 +53,7 @@ public class executarLogarConta {
 	
 		@Test
 		
-		public void loginIncorreto(){
+		public void loginIncorreto() throws Exception{
 			
 			paginaInicial novoAcesso = new paginaInicial(driver);
 
@@ -58,9 +61,9 @@ public class executarLogarConta {
 			
 			menuLogin novoMenuLogin = new menuLogin(driver);
 			
-			novoMenuLogin.preencherUsername("jorge_errado");
+			novoMenuLogin.preencherUsername(ExcelUtils.getCellData(4, 1));
 			
-			novoMenuLogin.preencherPassword("123456Senha");
+			novoMenuLogin.preencherPassword(ExcelUtils.getCellData(4, 1));
 			
 			novoMenuLogin.clicarBotaoLogar();
 			
