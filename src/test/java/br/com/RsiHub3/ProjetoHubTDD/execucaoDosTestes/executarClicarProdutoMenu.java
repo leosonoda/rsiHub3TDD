@@ -28,7 +28,7 @@ public class executarClicarProdutoMenu {
 			driver = navegador.abrirChrome();
 		}
 
-		//@Test
+		@Test
 		
 		public void clicarProdutoMenuSucesso(){
 			

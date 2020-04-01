@@ -23,7 +23,7 @@ public class extentReport {
 	
 	public static void setupReport(String nomeReport) {
 		
-		htmlReporter = new ExtentHtmlReporter("src/test/resources/Reports/" + nomeReport + ".html");
+		htmlReporter = new ExtentHtmlReporter("src/test/Reports" + nomeReport + ".html");
 		
 		htmlReporter.config().setDocumentTitle("Report1");
 		

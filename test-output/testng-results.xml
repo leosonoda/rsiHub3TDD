@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19494" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:32 BRT">
+  <suite name="Default suite" duration-ms="16107" started-at="2020-03-31T16:29:46 BRT" finished-at="2020-03-31T16:30:02 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19494" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:32 BRT">
-      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta">
-        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="execut" is-config="true" duration-ms="8828" started-at="2020-03-28T14:33:12 BRT" finished-at="2020-03-28T14:33:21 BRT">
+    <test name="Default test" duration-ms="16107" started-at="2020-03-31T16:29:46 BRT" finished-at="2020-03-31T16:30:02 BRT">
+      <class name="br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu">
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="execut" is-config="true" duration-ms="7420" started-at="2020-03-31T16:29:46 BRT" finished-at="2020-03-31T16:29:53 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execut -->
-        <test-method status="PASS" signature="logarComSucesso()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="logarComSucesso" duration-ms="2411" started-at="2020-03-28T14:33:21 BRT" finished-at="2020-03-28T14:33:23 BRT">
+        <test-method status="PASS" signature="clicarProdutoMenuInexistente()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="clicarProdutoMenuInexistente" duration-ms="76" started-at="2020-03-31T16:29:53 BRT" finished-at="2020-03-31T16:29:53 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logarComSucesso -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="fim" is-config="true" duration-ms="71" started-at="2020-03-28T14:33:23 BRT" finished-at="2020-03-28T14:33:23 BRT">
+        </test-method> <!-- clicarProdutoMenuInexistente -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="fim" is-config="true" duration-ms="65" started-at="2020-03-31T16:29:53 BRT" finished-at="2020-03-31T16:29:53 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="execut" is-config="true" duration-ms="6381" started-at="2020-03-28T14:33:23 BRT" finished-at="2020-03-28T14:33:30 BRT">
+        <test-method status="PASS" signature="execut()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="execut" is-config="true" duration-ms="6116" started-at="2020-03-31T16:29:53 BRT" finished-at="2020-03-31T16:29:59 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- execut -->
-        <test-method status="PASS" signature="loginIncorreto()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="loginIncorreto" duration-ms="1710" started-at="2020-03-28T14:33:30 BRT" finished-at="2020-03-28T14:33:32 BRT">
+        <test-method status="PASS" signature="clicarProdutoMenuSucesso()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="clicarProdutoMenuSucesso" duration-ms="2336" started-at="2020-03-31T16:29:59 BRT" finished-at="2020-03-31T16:30:02 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginIncorreto -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta@30a3107a]" name="fim" is-config="true" duration-ms="65" started-at="2020-03-28T14:33:32 BRT" finished-at="2020-03-28T14:33:32 BRT">
+        </test-method> <!-- clicarProdutoMenuSucesso -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu@51e2adc7]" name="fim" is-config="true" duration-ms="65" started-at="2020-03-31T16:30:02 BRT" finished-at="2020-03-31T16:30:02 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarLogarConta -->
+      </class> <!-- br.com.RsiHub3.ProjetoHubTDD.execucaoDosTestes.executarClicarProdutoMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

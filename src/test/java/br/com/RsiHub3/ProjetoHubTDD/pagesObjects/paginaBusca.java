@@ -26,7 +26,7 @@ public class paginaBusca {
 	
 		public String buscaInexistente() {
 				
-				WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(20));
+				WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(60));
 				
 				espera.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//span[@class='ng-binding']"), "No results for \"monitor\""));
 				

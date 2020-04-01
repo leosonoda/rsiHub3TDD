@@ -16,7 +16,7 @@ public class executarCriarNovoCadastro {
 	
 	private WebDriver driver;
 	
-	String usuario = "jorgin13"; 
+	String usuario = "jorgin78"; 
 	String email = "jorge.jorge@email.com.br";
 	String senha = "123456Senha";
 	String senhaConfirm = "123456Senha";
